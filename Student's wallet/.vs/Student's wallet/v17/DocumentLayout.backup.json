@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|e:\\unity\\gitprojects\\studentswallet\\student\u0027s wallet\\assets\\scripts\\gamecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|e:\\unity\\gitprojects\\studentswallet\\student\u0027s wallet\\assets\\scripts\\marketlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\marketlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\assets\\scripts\\marketplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\marketplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\assets\\scripts\\gamecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,25 +35,49 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GameCycle.cs",
-              "DocumentMoniker": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameCycle.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\GameCycle.cs",
-              "ToolTip": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameCycle.cs",
-              "RelativeToolTip": "Assets\\scripts\\GameCycle.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAowB8AAAATAAAAAAAAAA==",
+              "Title": "MarketLogic.cs",
+              "DocumentMoniker": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\MarketLogic.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\MarketLogic.cs",
+              "ToolTip": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\MarketLogic.cs",
+              "RelativeToolTip": "Assets\\scripts\\MarketLogic.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-09T16:30:26.36Z",
+              "WhenOpened": "2025-04-04T10:48:08.351Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "MarketPlayerController.cs",
+              "DocumentMoniker": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\MarketPlayerController.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\MarketPlayerController.cs",
+              "ToolTip": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\MarketPlayerController.cs",
+              "RelativeToolTip": "Assets\\scripts\\MarketPlayerController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T10:20:18.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GameCycle.cs",
+              "DocumentMoniker": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameCycle.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\GameCycle.cs",
+              "ToolTip": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameCycle.cs",
+              "RelativeToolTip": "Assets\\scripts\\GameCycle.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAIwEYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T16:30:26.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\MainMenu.cs",
               "RelativeDocumentMoniker": "Assets\\scripts\\MainMenu.cs",
               "ToolTip": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\MainMenu.cs",
               "RelativeToolTip": "Assets\\scripts\\MainMenu.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwB0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-03T17:10:44.208Z"
             }

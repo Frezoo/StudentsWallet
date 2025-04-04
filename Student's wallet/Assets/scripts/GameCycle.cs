@@ -9,7 +9,7 @@ public class GameCycle : MonoBehaviour
     [Header("Статистика")]
     public string Name;
     public float Money;
-    public float Hungry;
+    //public float Hungry;
     public float Psycho;
     public float Grade;
     public float Energy;
@@ -26,7 +26,7 @@ public class GameCycle : MonoBehaviour
     public TextMeshProUGUI PsychoCountText;
     public TextMeshProUGUI HungryCountText;
 
-    public Image HungerFront;
+    //public Image HungerFront;
     public Image PsychoFront;
     public Image EnergyFront;
     public Image GradeFront;
@@ -53,7 +53,7 @@ public class GameCycle : MonoBehaviour
     void Initizializate()
     {
         //Money = PlayerPrefs.GetFloat("");
-        Hungry = PlayerPrefs.GetFloat("");
+        //Hungry = PlayerPrefs.GetFloat("");
         Psycho = PlayerPrefs.GetFloat("");
         Name = PlayerPrefs.GetString("");
     }
@@ -64,11 +64,11 @@ public class GameCycle : MonoBehaviour
         TimeText.text = $"{Hourse}:{Minuts}";
 
         EnergyCountText.text = Energy.ToString();
-        HungryCountText.text = Hungry.ToString();
+        //HungryCountText.text = Hungry.ToString();
         GradeCountText.text = Grade.ToString();
         PsychoCountText.text = Psycho.ToString();
 
-        HungerFront.fillAmount = Hungry/100;
+        //HungerFront.fillAmount = Hungry/100;
         PsychoFront.fillAmount = Psycho/100;
         EnergyFront.fillAmount = Energy / 100;
         GradeFront.fillAmount = Grade / 100;
@@ -76,7 +76,7 @@ public class GameCycle : MonoBehaviour
     
     void StatisticClamp()
     {
-        Hungry = Mathf.Clamp(Hungry,0, 100);
+        //Hungry = Mathf.Clamp(Hungry,0, 100);
         Psycho = Mathf.Clamp(Psycho, 0, 100);
         Energy = Mathf.Clamp(Energy, 0, 100);
         Grade = Mathf.Clamp(Grade, 0, 100);

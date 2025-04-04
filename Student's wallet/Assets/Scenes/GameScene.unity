@@ -1371,7 +1371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &184520924
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3002,7 +3002,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Vasya
   Money: 0
-  Hungry: 0
   Psycho: 0
   Grade: 0
   Energy: 0
@@ -3015,7 +3014,6 @@ MonoBehaviour:
   GradeCountText: {fileID: 1334867706}
   PsychoCountText: {fileID: 706349864}
   HungryCountText: {fileID: 340504868}
-  HungerFront: {fileID: 1926367167}
   PsychoFront: {fileID: 449480539}
   EnergyFront: {fileID: 2029384455}
   GradeFront: {fileID: 799363125}
@@ -7434,7 +7432,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1621464969
 RectTransform:
   m_ObjectHideFlags: 0
