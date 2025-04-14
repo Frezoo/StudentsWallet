@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: d6bd39c5db1afab43ae8d9d1b7f0f4a0
+  - enabled: 1
+    path: Assets/Scenes/NewGameSetupScene.unity
+    guid: bcdd66ef689d2ee46911003a9b3d4210
+  - enabled: 1
+    path: Assets/Scenes/MarketMiniGame.unity
+    guid: 02a56a4e898ff8d40af5e6a522fa8095
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

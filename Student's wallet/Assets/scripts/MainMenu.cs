@@ -7,7 +7,11 @@ public class MainMenu : MonoBehaviour
     public GameObject SettingsOBJ;
 
 
-
+    private void Start()
+    {
+        PlayerPrefs.DeleteAll(); // Очищаем все PlayerPrefs
+        PlayerPrefs.Save();
+    }
     public void ChangeSettingsVisible ()
     {
         SettingsOBJ.SetActive(!SettingsOBJ.activeSelf);
