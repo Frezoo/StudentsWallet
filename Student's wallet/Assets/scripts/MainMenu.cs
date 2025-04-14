@@ -6,27 +6,29 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject SettingsOBJ;
 
-    void Start()
-    {
-        
-    }
 
-    
-    void Update()
-    {
-        
-    }
 
     public void ChangeSettingsVisible ()
     {
         SettingsOBJ.SetActive(!SettingsOBJ.activeSelf);
     }
-    
+
     public void StartGame()
     {
-        SceneManager.LoadScene(1);
-    }
+        // Загружаем сцену NewGameSetupScene, если игра запускается впервые
+        // или GameScene если игра уже запускалась.
 
+        if (PlayerPrefs.GetInt("GameInitialized", 0) == 0)
+        {
+            // Загружаем сцену NewGameSetupScene
+            SceneManager.LoadScene("NewGameSetupScene");
+        }
+        else
+        {
+            // Загружаем сцену GameScene
+            SceneManager.LoadScene("GameScene");
+        }
+    }
     public void QuitGame()
     {
         Application.Quit();

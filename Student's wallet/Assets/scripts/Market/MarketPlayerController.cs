@@ -2,22 +2,31 @@ using UnityEngine;
 
 public class MarketPlayerController : MonoBehaviour
 {
+    [Header("Movement")]
     public float Speed;
     public float LerpSpeed = 10f;
-
     private Vector2 direction;
     private GameObject player;
+
+    [Header("Health")]
     public int Health = 3;
+    public int MaxHealth = 3;
 
+    [Header("Eating Stats")]
+    public int GoodEatCount = 0;
+    public int BadEatCount = 0;
 
-    public float DefaultScaleX = 0.96f;
-    public float MaxScaleX = 0.96f;
-    private float _currentScaleX;
+    [Header("Scaling")]
+    const  float DefaultScaleX = 0.96f;
+    const  float MaxScaleX = 0.96f;
+    private float currentScaleX;
+
 
     void Start()
     {
         player = gameObject;
-        _currentScaleX = DefaultScaleX;
+        currentScaleX = DefaultScaleX;
+
     }
 
 
@@ -43,8 +52,8 @@ public class MarketPlayerController : MonoBehaviour
         targetScaleX = Mathf.Sign(horizontalAxis) * DefaultScaleX;
 
 
-        _currentScaleX = Mathf.Lerp(_currentScaleX, targetScaleX, Time.deltaTime * LerpSpeed);
-        return _currentScaleX;
+        currentScaleX = Mathf.Lerp(currentScaleX, targetScaleX, Time.deltaTime * LerpSpeed);
+        return currentScaleX;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -52,13 +61,16 @@ public class MarketPlayerController : MonoBehaviour
         if (collision.CompareTag("Eat"))
         {
             Debug.Log("Get Eat");
+            GoodEatCount++;
             Destroy(collision.gameObject);
         }
         else
         {
             Debug.Log("Get BadEat");
+            BadEatCount++;
             Health--;
             Destroy(collision.gameObject);
+            
         }
     }
 }
