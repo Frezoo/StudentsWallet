@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class MarketLogic : MonoBehaviour
 {
     [Header("Fruit Counters")]
@@ -28,6 +29,10 @@ public class MarketLogic : MonoBehaviour
     public TextMeshProUGUI FinalPanelMissText;
     public TextMeshProUGUI FinalPanelAwardText;
 
+    public TextMeshProUGUI PriceText;
+    public TextMeshProUGUI PlayerMoneyText;
+    public GameObject InitPanel;
+
     [Header("Timers")]
     private float timeSinceLastSpawn;
     private float timeBetweenSpawns;
@@ -40,26 +45,33 @@ public class MarketLogic : MonoBehaviour
     public float FruitSpeed;
     public float FruitSpeedMultiplier;
     public float AwardCount;
+
     public bool GameOver;
+
     public int Money;
+
+
+
+    public Slider SldierPrice;
 
     [Header("Other")]
     public List<Transform> FruitSpawnPoints;
     public MarketPlayerController PlayerScript;
 
 
-    void Start()
+
+    public int fruitsPerSpawn = 2;
+
+    private void Start()
     {
         InitializeLevel(Money);
     }
 
-
-    public int fruitsPerSpawn = 2; // Количество фруктов для спавна за раз
-
     void Update()
     {
         UpdateStatistic();
-        if (PlayerScript.Health > 0 && (CollectedBadFruitByPlayer + CollectedGoodFruitByPlayer + FruitOutScreen) < MaxFruitCount)
+
+        if ((PlayerScript.Health > 0 && (CollectedBadFruitByPlayer + CollectedGoodFruitByPlayer + FruitOutScreen) < MaxFruitCount))
         {
             EatSpanwer();
         }
@@ -74,9 +86,9 @@ public class MarketLogic : MonoBehaviour
         timeSinceLastSpawn += Time.deltaTime;
         if (timeSinceLastSpawn >= timeBetweenSpawns)
         {
-            for (int i = 0; i < fruitsPerSpawn; i++) // Спавним несколько фруктов
+            for (int i = 0; i < fruitsPerSpawn; i++)
             {
-                if (GoodFruitCount + BadFruitCount >= MaxFruitCount) break; // Прерываем цикл, если достигли максимального количества
+                if (GoodFruitCount + BadFruitCount >= MaxFruitCount) break;
 
                 var eatType = Random.Range(0, 2);
 
@@ -102,7 +114,7 @@ public class MarketLogic : MonoBehaviour
         {
             GameOver = true;
             Time.timeScale = 0.01f;
-            if(PlayerScript.Health != PlayerScript.MaxHealth)
+            if (PlayerScript.Health != PlayerScript.MaxHealth)
             {
                 AwardCount = Mathf.FloorToInt(AwardCount * (PlayerScript.Health / 3f));
             }
@@ -113,6 +125,8 @@ public class MarketLogic : MonoBehaviour
             FinalPanelBadEatText.text = $"Подобрано испорченной еды:{PlayerScript.BadEatCount}";
             FinalPanelMissText.text = $"Пропущено еды:{BadFruitCount + GoodFruitCount - PlayerScript.BadEatCount - PlayerScript.GoodEatCount}";
             FinalPanelAwardText.text = $"Итоговая награда:{AwardCount} ед. Еды";
+
+            PlayerPrefs.SetInt("FrideEat",PlayerPrefs.GetInt("FrideEat") + (int)AwardCount);
         }
     }
 
@@ -163,7 +177,7 @@ public class MarketLogic : MonoBehaviour
             MaxBadFruitCount = 15; // Увеличиваем количество плохих фруктов
             AwardCount = 15; // Увеличиваем базовую награду
         }
-    
+
 
         FruitSpeed *= FruitSpeedMultiplier; // Применяем множитель к базовой скорости
     }
@@ -172,6 +186,11 @@ public class MarketLogic : MonoBehaviour
     {
         FruitOutScreen++;
         Destroy(collision);
+    }
+
+    public void StartGame()
+    {
+
     }
 
 }

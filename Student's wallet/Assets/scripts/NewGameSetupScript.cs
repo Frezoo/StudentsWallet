@@ -54,6 +54,10 @@ public class NewGameSetup : MonoBehaviour
         GameManager.Instance.playerName = playerName;
         GameManager.Instance.selectedGoal = selectedGoal;
 
+        PlayerPrefs.SetString("Name", playerName);
+        PlayerPrefs.SetString("Goal", selectedGoal);
+
+
         // Устанавливаем флаг, что игра была инициализирована
         PlayerPrefs.SetInt("GameInitialized", 1);
         PlayerPrefs.Save();
