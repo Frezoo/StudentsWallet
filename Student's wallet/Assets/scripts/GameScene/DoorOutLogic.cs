@@ -12,14 +12,27 @@ public class DoorOutLogic : MonoBehaviour
     public List<int> AcceptedMarketTime;
     public List<int> AcceptedUniversityTime;
 
-    private void Awake()
+    void Start()
     {
         GC = GameObject.Find("UpdateUI").GetComponent<GameCycle>();
     }
 
     public void GoToWork()
     {
+        if (AcceptedWorkTime.Contains(GameManager.Instance.Hourse))
+        {
+            if (GameManager.Instance.Job == 0)
+            {
+                return;
+            }
+            GC.FadeScreen(6, 0.4f);
+            GameManager.Instance.ChangeTime(3, 0);
+            GameManager.Instance.Energy -= 50;
+            GameManager.Instance.Psycho -= 50;
 
+            SceneManager.LoadSceneAsync(4 + (int)GameManager.Instance.Job);
+        }
+       
     }
 
     public void GoToMarket()
@@ -53,7 +66,7 @@ public class DoorOutLogic : MonoBehaviour
             GameManager.Instance.ChangeTime(1, 0);
             GC.FadeScreen(2, 1);
             GameManager.Instance.Energy -= 30;
-            GameManager.Instance.Psycho -= 30;
+            GameManager.Instance.Psycho += 30;
         }
         
     }

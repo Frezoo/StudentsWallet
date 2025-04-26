@@ -3,36 +3,12 @@
   "WorkspaceRootPath": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|e:\\unity\\gitprojects\\studentswallet\\student\u0027s wallet\\assets\\scripts\\market\\marketlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\market\\marketlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\assets\\scripts\\courier\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\courier\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|e:\\unity\\gitprojects\\studentswallet\\student\u0027s wallet\\assets\\scripts\\gamescene\\fridgelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamescene\\fridgelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|e:\\unity\\gitprojects\\studentswallet\\student\u0027s wallet\\assets\\scripts\\gamescene\\dooroutlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamescene\\dooroutlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\assets\\scripts\\gamescene\\gamecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamescene\\gamecycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\assets\\scripts\\gamescene\\bedlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamescene\\bedlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\assets\\scripts\\gamescene\\computerlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamescene\\computerlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\assets\\scripts\\gamescene\\bathroomdoorlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamescene\\bathroomdoorlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|e:\\unity\\gitprojects\\studentswallet\\student\u0027s wallet\\assets\\scripts\\courier\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4AF7C803-085C-33AE-B390-AA1CA739FC88}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\courier\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,103 +27,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MarketLogic.cs",
-              "DocumentMoniker": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\Market\\MarketLogic.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\Market\\MarketLogic.cs",
-              "ToolTip": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\Market\\MarketLogic.cs",
-              "RelativeToolTip": "Assets\\scripts\\Market\\MarketLogic.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAIwEgAAAAJAAAAAAAAAA==",
+              "Title": "Manager.cs",
+              "DocumentMoniker": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\Courier\\Manager.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Courier\\Manager.cs",
+              "ToolTip": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\Courier\\Manager.cs",
+              "RelativeToolTip": "Assets\\scripts\\Courier\\Manager.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAEwDMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T15:13:57.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DoorOutLogic.cs",
-              "DocumentMoniker": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameScene\\DoorOutLogic.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\GameScene\\DoorOutLogic.cs",
-              "ToolTip": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameScene\\DoorOutLogic.cs",
-              "RelativeToolTip": "Assets\\scripts\\GameScene\\DoorOutLogic.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAgwBYAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T14:31:36.427Z",
+              "WhenOpened": "2025-04-26T12:35:51.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FridgeLogic.cs",
-              "DocumentMoniker": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameScene\\FridgeLogic.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\GameScene\\FridgeLogic.cs",
-              "ToolTip": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameScene\\FridgeLogic.cs",
-              "RelativeToolTip": "Assets\\scripts\\GameScene\\FridgeLogic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Player.cs",
+              "DocumentMoniker": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\Courier\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\scripts\\Courier\\Player.cs",
+              "ToolTip": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\Courier\\Player.cs",
+              "RelativeToolTip": "Assets\\scripts\\Courier\\Player.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwIQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T05:15:11.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ComputerLogic.cs",
-              "DocumentMoniker": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameScene\\ComputerLogic.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\GameScene\\ComputerLogic.cs",
-              "ToolTip": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameScene\\ComputerLogic.cs",
-              "RelativeToolTip": "Assets\\scripts\\GameScene\\ComputerLogic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T19:04:19.098Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BathroomDoorLogic.cs",
-              "DocumentMoniker": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameScene\\BathroomDoorLogic.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\GameScene\\BathroomDoorLogic.cs",
-              "ToolTip": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameScene\\BathroomDoorLogic.cs",
-              "RelativeToolTip": "Assets\\scripts\\GameScene\\BathroomDoorLogic.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T18:57:52.446Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GameCycle.cs",
-              "DocumentMoniker": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameScene\\GameCycle.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\GameScene\\GameCycle.cs",
-              "ToolTip": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameScene\\GameCycle.cs",
-              "RelativeToolTip": "Assets\\scripts\\GameScene\\GameCycle.cs",
-              "ViewState": "AgIAADsAAAAAAAAAAAAwwDQAAABXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T18:42:45.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BedLogic.cs",
-              "DocumentMoniker": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameScene\\BedLogic.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\GameScene\\BedLogic.cs",
-              "ToolTip": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameScene\\BedLogic.cs",
-              "RelativeToolTip": "Assets\\scripts\\GameScene\\BedLogic.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAIwA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-20T18:22:31.324Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\scripts\\GameManager.cs",
-              "ToolTip": "E:\\Unity\\GitProjects\\StudentsWallet\\Student\u0027s wallet\\Assets\\scripts\\GameManager.cs",
-              "RelativeToolTip": "Assets\\scripts\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T11:18:41.421Z",
+              "WhenOpened": "2025-04-26T11:48:59.394Z",
               "EditorCaption": ""
             }
           ]

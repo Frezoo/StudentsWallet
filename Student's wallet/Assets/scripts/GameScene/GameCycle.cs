@@ -31,7 +31,7 @@ public class GameCycle : MonoBehaviour
 
     void Start()
     {
-        NameText.text = GameManager.Instance.playerName;
+        NameText.text = GameManager.Instance.PlayerName;
 
         if (fadeImage != null)
         {
@@ -50,7 +50,7 @@ public class GameCycle : MonoBehaviour
     void UpdateUI()
     {
 
-        TimeText.text = $"{GameManager.Instance.Hourse}:{GameManager.Instance.Minuts}";
+        TimeText.text = $"{GameManager.Instance.Hourse.ToString().PadLeft(2, '0')}:{GameManager.Instance.Minuts.ToString().PadLeft(2, '0')}";
 
         EnergyCountText.text = GameManager.Instance.Energy.ToString();
 

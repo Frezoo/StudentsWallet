@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Eat
   - BadEat
+  - Road
+  - Restourant
+  - Client
   layers:
   - Default
   - TransparentFX
@@ -13,7 +16,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - gridLayer
   - 
   - 
   - 

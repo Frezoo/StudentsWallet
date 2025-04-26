@@ -13,7 +13,7 @@ public class BedLogic : MonoBehaviour
     public List<int> SleepAcceptableTime;
     public GameCycle GC;
 
-    public bool Sleep { get; private set; }
+    public bool Sleep;
 
     public void Start()
     {
@@ -30,11 +30,12 @@ public class BedLogic : MonoBehaviour
         if (SleepAcceptableTime.Contains(GameManager.Instance.Hourse))
         {
             Debug.Log("U can sleep");
+            Sleep = true;
             GameManager.Instance.ChangeTime(1, 0);
             GameManager.Instance.Energy += 10;
             GameManager.Instance.Psycho += 2;
             GC.FadeScreen(2,1);            
-            Sleep = true; 
+            Sleep = false; 
           
         }
 
