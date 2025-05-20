@@ -6,7 +6,7 @@ public enum Job
     None = 0,
     Ñourier = 1,
     AccountantsAssistant = 2,
-    CallÑenterOperator =3
+    CallÑenterOperator = 3
 }
 
 public class GameManager : MonoBehaviour
@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     [Header("Âğåìÿ")]
     public int Hourse;
     public int Minuts;
+    public int Day;
 
     [Header("Äğóãîå")]
     public GameCycle GC;
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+
 
         if (Instance != null && Instance != this)
         {
@@ -65,9 +67,11 @@ public class GameManager : MonoBehaviour
         Energy = PlayerPrefs.GetFloat("Energy");
         Hourse = PlayerPrefs.GetInt("Hours");
         Minuts = PlayerPrefs.GetInt("Minuts");
+        Day = PlayerPrefs.GetInt("Day");
+        Job = (Job)PlayerPrefs.GetInt("Job");
     }
 
-    public void ChangeTime(int hourse,int minuts)
+    public void ChangeTime(int hourse, int minuts)
     {
         Hourse += hourse;
         Minuts += minuts;
@@ -91,8 +95,15 @@ public class GameManager : MonoBehaviour
             GC.FadeScreen(8, 0.1f);
             Hourse = 7;
             Minuts = 0;
+            Day++;
+        }
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            ScreenCapture.CaptureScreenshot("screenshot.png");
+            Debug.Log("Ñêğèíøîò âçÿò!");
         }
     }
+
 
     private void OnApplicationQuit()
     {
@@ -102,5 +113,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetFloat("Energy", Energy);
         PlayerPrefs.SetInt("Hours", Hourse);
         PlayerPrefs.SetInt("Minuts", Minuts);
+        PlayerPrefs.SetInt("Day", Day);
+        PlayerPrefs.SetInt("Job", (int)Job);
     }
 }

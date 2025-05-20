@@ -1150,11 +1150,12 @@ MonoBehaviour:
   SelectedGoal: 
   Job: 0
   Money: 0
-  Psycho: 0
-  Grade: 0
-  Energy: 0
-  Hourse: 0
+  Psycho: 100
+  Grade: 100
+  Energy: 100
+  Hourse: 7
   Minuts: 0
+  Day: 0
   GC: {fileID: 0}
 --- !u!4 &2063375841
 Transform:

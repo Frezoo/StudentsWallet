@@ -153,7 +153,7 @@ public class MarketLogic : MonoBehaviour
     {
         var _spendingAmount = spendingAmount; // Сохраняем потраченную сумму
         FruitSpeedMultiplier = 1f; // Устанавливаем множитель скорости по умолчанию
-
+        Time.timeScale = 1f;
         if (spendingAmount >= 100 && spendingAmount <= 350)
         {
             // Легкий уровень

@@ -64,7 +64,7 @@ public class DoorOutLogic : MonoBehaviour
         if (AcceptedGymTime.Contains(GameManager.Instance.Hourse))
         {
             GameManager.Instance.ChangeTime(1, 0);
-            GC.FadeScreen(2, 1);
+            GC.FadeScreen(4, 2);
             GameManager.Instance.Energy -= 30;
             GameManager.Instance.Psycho += 30;
         }

@@ -11,11 +11,11 @@ public class GameCycle : MonoBehaviour
     public TextMeshProUGUI MoneyText;
     public TextMeshProUGUI NameText;
     public TextMeshProUGUI TimeText;
+    public TextMeshProUGUI DayText;
 
     public TextMeshProUGUI EnergyCountText;
     public TextMeshProUGUI GradeCountText;
     public TextMeshProUGUI PsychoCountText;
-    public TextMeshProUGUI HungryCountText;
 
     public Image PsychoFront;
     public Image EnergyFront;
@@ -32,7 +32,7 @@ public class GameCycle : MonoBehaviour
     void Start()
     {
         NameText.text = GameManager.Instance.PlayerName;
-
+        Time.timeScale = 1f;
         if (fadeImage != null)
         {
             Color imageColor = fadeImage.color;
@@ -51,6 +51,8 @@ public class GameCycle : MonoBehaviour
     {
 
         TimeText.text = $"{GameManager.Instance.Hourse.ToString().PadLeft(2, '0')}:{GameManager.Instance.Minuts.ToString().PadLeft(2, '0')}";
+        MoneyText.text = $"{GameManager.Instance.Money}$";
+        DayText.text = GameManager.Instance.Day.ToString();
 
         EnergyCountText.text = GameManager.Instance.Energy.ToString();
 
