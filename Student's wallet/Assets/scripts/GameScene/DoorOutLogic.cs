@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class DoorOutLogic : MonoBehaviour
@@ -11,6 +12,8 @@ public class DoorOutLogic : MonoBehaviour
     public List<int> AcceptedGymTime;
     public List<int> AcceptedMarketTime;
     public List<int> AcceptedUniversityTime;
+
+    
 
     void Start()
     {
@@ -48,12 +51,29 @@ public class DoorOutLogic : MonoBehaviour
 
     public void GoToUniversity()
     {
-        if (AcceptedUniversityTime.Contains(GameManager.Instance.Hourse))
+        if (AcceptedUniversityTime.Contains(GameManager.Instance.Hourse) && !(GameManager.Instance.IsPlayerWasOnLecture))
         {
-            GameManager.Instance.ChangeTime(3, 0);
-            GC.FadeScreen(6, 1);
-            GameManager.Instance.Energy -= 55;
-            GameManager.Instance.Psycho -= 20;
+            if (GameManager.Instance.Day % 2 == 0)
+            {
+                GameManager.Instance.ChangeTime(3, 0);
+                GC.FadeScreen(6, 1);
+                GameManager.Instance.Energy -= 55;
+                GameManager.Instance.Psycho -= 20;
+                GameManager.Instance.IsPlayerWasOnLecture = true;
+            }
+            else if (GameManager.Instance.Day == 1)
+            {
+                SceneManager.LoadScene(8);
+                PlayerPrefs.SetInt("LectureNumber", 1);
+                GameManager.Instance.IsPlayerWasOnLecture = true;
+            }
+            else
+            {
+                SceneManager.LoadScene(8);
+                PlayerPrefs.SetInt("LectureNumber", 1 + (GameManager.Instance.Day / 2));
+                GameManager.Instance.IsPlayerWasOnLecture = true;
+            }
+            
         }
 
 

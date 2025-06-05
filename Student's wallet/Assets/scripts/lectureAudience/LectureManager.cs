@@ -35,8 +35,10 @@ public class LectureManager : MonoBehaviour
     void Start()
     {
         // Загрузка лекции из AssetDatabase (убедитесь, что лекция находится в нужном месте)
+        lecturePath = $"Assets/Lectures/Lecture{PlayerPrefs.GetInt("LectureNumber")}.asset";
         currentLecture = AssetDatabase.LoadAssetAtPath<Lecture1>(lecturePath);
         Debug.Log("Loaded lecture: " + currentLecture);
+        GameManager.Instance.FullGrade += 10;
 
         // Отображение заголовка лекции (если есть)
         if (lectureTitleText != null && currentLecture != null && !string.IsNullOrEmpty(currentLecture.lectureTitle))
@@ -185,6 +187,7 @@ public class LectureManager : MonoBehaviour
         {
             Debug.Log("Правильно!");
             answerButtons[selectedAnswer].GetComponent<Image>().color = Color.green;
+            GameManager.Instance.FullGrade += 10;
             
         }
         else
@@ -225,8 +228,16 @@ public class LectureManager : MonoBehaviour
     /// <param name="pressedButton">Кнопка, на которую нажал пользователь.</param>
     private IEnumerator StartCreateQuestionAfterDelay(Image selectedButton)
     {
+        foreach (Button button in answerButtons)
+        {
+            button.interactable = false; // Деактивируем кнопки
+        }
         yield return new WaitForSeconds(1f); // Задержка в 1 секунду
         selectedButton.color = Color.white;
+        foreach (Button button in answerButtons)
+        {
+            button.interactable = true; // активируем кнопки
+        }
         CreateQuestion(); // Отображаем следующий вопрос
     }
 }

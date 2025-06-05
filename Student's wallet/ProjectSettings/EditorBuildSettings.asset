@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CallCenter.unity
     guid: e2fe53ef78300ba4493c8f47ee116b7b
+  - enabled: 1
+    path: Assets/Scenes/lectureAudience.unity
+    guid: 662a920d1d6257b4e93e586722640c03
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
