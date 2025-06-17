@@ -53,25 +53,27 @@ public class DoorOutLogic : MonoBehaviour
     {
         if (AcceptedUniversityTime.Contains(GameManager.Instance.Hourse) && !(GameManager.Instance.IsPlayerWasOnLecture))
         {
+            GameManager.Instance.ChangeTime(3, 0);
+            GameManager.Instance.Energy -= 55;
+            GameManager.Instance.Psycho -= 20;
+            GameManager.Instance.IsPlayerWasOnLecture = true;
             if (GameManager.Instance.Day % 2 == 0)
             {
-                GameManager.Instance.ChangeTime(3, 0);
                 GC.FadeScreen(6, 1);
-                GameManager.Instance.Energy -= 55;
-                GameManager.Instance.Psycho -= 20;
-                GameManager.Instance.IsPlayerWasOnLecture = true;
             }
             else if (GameManager.Instance.Day == 1)
             {
                 SceneManager.LoadScene(8);
                 PlayerPrefs.SetInt("LectureNumber", 1);
-                GameManager.Instance.IsPlayerWasOnLecture = true;
             }
-            else
+            else if(GameManager.Instance.Day <= 10)
             {
                 SceneManager.LoadScene(8);
                 PlayerPrefs.SetInt("LectureNumber", 1 + (GameManager.Instance.Day / 2));
-                GameManager.Instance.IsPlayerWasOnLecture = true;
+            }
+            else
+            {
+                GC.FadeScreen(6, 1);
             }
             
         }

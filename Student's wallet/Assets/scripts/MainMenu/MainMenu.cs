@@ -33,6 +33,16 @@ public class MainMenu : MonoBehaviour
             SceneManager.LoadScene("GameScene");
         }
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            PlayerPrefs.DeleteAll();
+            PlayerPrefs.Save();
+            GameManager.Instance.ClearSaves();
+        }
+    }
     public void QuitGame()
     {
         Application.Quit();

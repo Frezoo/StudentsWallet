@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public string SelectedGoal;
     public Job Job;
 
+
     [Header("Ñòàòèñòèêà")]
     public float Money;
     public float Psycho;
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
     [Header("Äðóãîå")]
     public GameCycle GC;
     public bool IsPlayerWasOnLecture;
+    public bool WasPayment;
 
 
 
@@ -94,20 +96,50 @@ public class GameManager : MonoBehaviour
     {
         if ((Hourse >= 3 && Hourse < 7) && (SceneManager.GetActiveScene().name == "GameScene"))
         {
-            GC = GameObject.Find("UpdateUI").GetComponent<GameCycle>();
-            GC.FadeScreen(8, 0.1f);
-            Hourse = 7;
-            Minuts = 0;
-            Day++;
-            IsPlayerWasOnLecture = false;
+            SetNextDay();
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
             ScreenCapture.CaptureScreenshot("screenshot.png");
             Debug.Log("Ñêðèíøîò âçÿò!");
         }
+
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            Job = Job.Ñourier;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            Job = Job.CallÑenterOperator;
+        }
+
+        if (Day % 5 == 0 && WasPayment == false)
+        {
+            Money += 1000;
+            WasPayment = true;
+        }
+        else if(Day % 5 != 0)
+        {
+            WasPayment = false;
+        }
     }
 
+    private void SetNextDay()
+    {
+        GC = GameObject.Find("UpdateUI").GetComponent<GameCycle>();
+        GC.FadeScreen(8, 0.1f);
+        Hourse = 7;
+        Minuts = 0;
+        Day++;
+        Energy += 40;
+        Psycho += 8;
+        if (IsPlayerWasOnLecture == false)
+        {
+            Grade -= 10;
+            Psycho -= 10;
+        }
+        IsPlayerWasOnLecture = false;
+    }
 
     private void OnApplicationQuit()
     {
@@ -119,6 +151,13 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("Minuts", Minuts);
         PlayerPrefs.SetInt("Day", Day);
         PlayerPrefs.SetInt("Job", (int)Job);
+    }
+
+    public void ClearSaves()
+    {
+        PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
+        SetupInitialGameState();
     }
 
     private void SetupInitialGameState()

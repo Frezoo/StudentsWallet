@@ -31,8 +31,8 @@ public class InitPanel : MonoBehaviour
         price = Mathf.RoundToInt(priceSlider.value * priceMultiplier);
         tempMoney = GameManager.Instance.Money - price;
 
-        PriceText.text = price.ToString() + "$";
-        MoneyText.text = tempMoney.ToString() + "$";
+        PriceText.text = price.ToString() + "ð";
+        MoneyText.text = tempMoney.ToString() + "ð";
 
     }
 

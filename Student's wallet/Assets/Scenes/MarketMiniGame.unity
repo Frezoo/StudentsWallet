@@ -186,10 +186,13 @@ MonoBehaviour:
   Psycho: 0
   Grade: 0
   Energy: 0
+  FullGrade: 0
   Hourse: 0
   Minuts: 0
   Day: 0
   GC: {fileID: 0}
+  IsPlayerWasOnLecture: 0
+  WasPayment: 0
 --- !u!4 &18859652
 Transform:
   m_ObjectHideFlags: 0
@@ -1589,7 +1592,7 @@ MonoBehaviour:
   MaxBadFruitCount: 3
   FruitOutScreen: 0
   EatCountText: {fileID: 889436776}
-  HealthPanel: {fileID: 572304457}
+  HealthPanel: {fileID: 790583276}
   FinalPanel: {fileID: 562391446}
   FinalPanelGoodEatText: {fileID: 1136496880}
   FinalPanelBadEatText: {fileID: 270520046}
@@ -1600,7 +1603,7 @@ MonoBehaviour:
   InitPanel: {fileID: 0}
   GoodFruit: {fileID: 5606387100127065475, guid: 90985a073e6aee845bdafc04e6662c56, type: 3}
   BadFruit: {fileID: 15235137691505323, guid: 42b25c571b914a54ab10cfd3545982f8, type: 3}
-  FruitSpeed: 10
+  FruitSpeed: 5
   FruitSpeedMultiplier: 2
   AwardCount: 4
   GameOver: 0

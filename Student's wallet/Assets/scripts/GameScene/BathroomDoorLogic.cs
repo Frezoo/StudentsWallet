@@ -32,7 +32,7 @@ public class BathroomDoorLogic : MonoBehaviour
     {
         if (ShowerAcceptableTime.Contains(GameManager.Instance.Hourse))
         {
-            GameManager.Instance.Psycho += 15;
+            GameManager.Instance.Psycho += 5;
             GC.FadeScreen(TimeToBrushInMinuts / 60 * 2, 0.4f);
             GameManager.Instance.ChangeTime(0, TimeToShowerInMinuts);
         }

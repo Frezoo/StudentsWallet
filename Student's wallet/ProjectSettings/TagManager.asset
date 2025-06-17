@@ -9,6 +9,7 @@ TagManager:
   - Road
   - Restourant
   - Client
+  - border
   layers:
   - Default
   - TransparentFX

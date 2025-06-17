@@ -17,18 +17,18 @@ public class MarketPlayerController : MonoBehaviour
     public int BadEatCount = 0;
 
     [Header("Scaling")]
-    const  float DefaultScaleX = 0.96f;
-    const  float MaxScaleX = 0.96f;
+    const float DefaultScaleX = 3.9964f;
+    const float MaxScaleX = 3.9964f;
     private float currentScaleX;
 
+    private Camera mainCamera;
 
     void Start()
     {
         player = gameObject;
         currentScaleX = DefaultScaleX;
-
+        mainCamera = Camera.main;
     }
-
 
     void Update()
     {
@@ -39,8 +39,12 @@ public class MarketPlayerController : MonoBehaviour
     {
         direction = new Vector2(Input.GetAxis("Horizontal"), 0);
         player.transform.Translate(direction * Speed * Time.deltaTime);
-        player.transform.localScale = new Vector3(GetScaleX(), player.transform.localScale.y, player.transform.localScale.z);
 
+        Vector3 viewPos = mainCamera.WorldToViewportPoint(transform.position);
+        viewPos.x = Mathf.Clamp(viewPos.x, 0f, 1f);
+        transform.position = mainCamera.ViewportToWorldPoint(viewPos);
+
+        player.transform.localScale = new Vector3(GetScaleX(), player.transform.localScale.y, player.transform.localScale.z);
     }
 
     float GetScaleX()
@@ -48,9 +52,14 @@ public class MarketPlayerController : MonoBehaviour
         float horizontalAxis = Input.GetAxis("Horizontal");
         float targetScaleX;
 
-
-        targetScaleX = Mathf.Sign(horizontalAxis) * DefaultScaleX;
-
+        if (horizontalAxis != 0)
+        {
+            targetScaleX = Mathf.Sign(horizontalAxis) * DefaultScaleX;
+        }
+        else
+        {
+            targetScaleX = currentScaleX; 
+        }
 
         currentScaleX = Mathf.Lerp(currentScaleX, targetScaleX, Time.deltaTime * LerpSpeed);
         return currentScaleX;
@@ -64,14 +73,12 @@ public class MarketPlayerController : MonoBehaviour
             GoodEatCount++;
             Destroy(collision.gameObject);
         }
-        else
+        else if (collision.CompareTag("BadEat"))
         {
             Debug.Log("Get BadEat");
             BadEatCount++;
             Health--;
             Destroy(collision.gameObject);
-            
         }
     }
 }
-

@@ -2412,7 +2412,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: '-40Min
 
-    +15Psy'
+    +5Psy'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1912b8ab2bbd99745a98f83930da19c5, type: 2}
   m_sharedMaterial: {fileID: -1780833435230781223, guid: 1912b8ab2bbd99745a98f83930da19c5, type: 2}
@@ -7412,10 +7412,12 @@ MonoBehaviour:
   Psycho: 100
   Grade: 100
   Energy: 0
+  FullGrade: 0
   Hourse: 0
   Minuts: 0
   Day: 0
   GC: {fileID: 0}
+  IsPlayerWasOnLecture: 0
 --- !u!4 &1680461442
 Transform:
   m_ObjectHideFlags: 0

@@ -1,4 +1,4 @@
-using System;
+Ôªøusing System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class GameCycle : MonoBehaviour
 {
 
-    [Header("»ÌÚÂÙÂÈÒ")]
+    [Header("–ò–Ω—Ç–µ—Ä—Ñ–µ–π—Å")]
     public TextMeshProUGUI MoneyText;
     public TextMeshProUGUI NameText;
     public TextMeshProUGUI TimeText;
@@ -51,7 +51,7 @@ public class GameCycle : MonoBehaviour
     {
 
         TimeText.text = $"{GameManager.Instance.Hourse.ToString().PadLeft(2, '0')}:{GameManager.Instance.Minuts.ToString().PadLeft(2, '0')}";
-        MoneyText.text = $"{GameManager.Instance.Money}$";
+        MoneyText.text = $"{GameManager.Instance.Money}—Ä";
         DayText.text = GameManager.Instance.Day.ToString();
 
         EnergyCountText.text = GameManager.Instance.Energy.ToString();

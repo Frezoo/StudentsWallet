@@ -35,8 +35,8 @@ public class LectureManager : MonoBehaviour
     void Start()
     {
         // Загрузка лекции из AssetDatabase (убедитесь, что лекция находится в нужном месте)
-        lecturePath = $"Assets/Lectures/Lecture{PlayerPrefs.GetInt("LectureNumber")}.asset";
-        currentLecture = AssetDatabase.LoadAssetAtPath<Lecture1>(lecturePath);
+        lecturePath = "Lecture" + PlayerPrefs.GetInt("LectureNumber");
+        currentLecture = Resources.Load<Lecture1>("Lectures/" + lecturePath);
         Debug.Log("Loaded lecture: " + currentLecture);
         GameManager.Instance.FullGrade += 10;
 
