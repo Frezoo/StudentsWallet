@@ -1,6 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
@@ -9,25 +9,27 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioSource musicSource;
     [SerializeField] private List<AudioClip> musicClips = new List<AudioClip>();
 
-    private const string VOLUME_KEY = "MusicVolume";
-
     void Awake()
     {
         if (Instance == null)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            LoadVolume();
-
-            // Подписываемся на событие загрузки сцены
-            SceneManager.sceneLoaded += OnSceneLoaded;
-
-            PlaySceneMusic(); // Проигрываем музыку для начальной сцены
         }
         else
         {
             Destroy(gameObject);
         }
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void OnSceneLoaded(UnityEngine.SceneManagement.Scene scene, LoadSceneMode mode)
@@ -57,7 +59,7 @@ public class AudioManager : MonoBehaviour
                 break;
 
             default:
-                Debug.Log($"Для сцены \"{sceneName}\" музыка не назначена.");
+                Debug.Log($"[AudioManager] Для сцены \"{sceneName}\" музыка не назначена.");
                 break;
         }
     }
@@ -68,49 +70,16 @@ public class AudioManager : MonoBehaviour
         {
             AudioClip clip = musicClips[clipIndex];
 
-            // Если клип уже играет — ничего не делаем
             if (musicSource.clip == clip && musicSource.isPlaying) return;
 
-            musicSource.clip = clip;
+            musicSource.clip = musicClips[clipIndex];
             musicSource.Play();
-        }
-    }
 
-    public void PlayMusic(string clipName)
-    {
-        AudioClip clip = musicClips.Find(c => c.name == clipName);
-        if (clip != null)
-        {
-            if (musicSource.clip != clip || !musicSource.isPlaying)
-            {
-                musicSource.clip = clip;
-                musicSource.Play();
-            }
+            Debug.Log($"[AudioManager] Воспроизводим музыку: {clip.name} (Индекс: {clipIndex})");
         }
         else
         {
-            Debug.LogWarning("Музыкальный клип с именем " + clipName + " не найден!");
+            Debug.LogWarning($"[AudioManager] Неверный индекс клипа: {clipIndex}");
         }
-    }
-
-    public void StopMusic()
-    {
-        if (musicSource.isPlaying)
-        {
-            musicSource.Stop();
-        }
-    }
-
-    public void SetVolume(float volume)
-    {
-        musicSource.volume = volume;
-        PlayerPrefs.SetFloat(VOLUME_KEY, volume);
-        PlayerPrefs.Save();
-    }
-
-    private void LoadVolume()
-    {
-        float savedVolume = PlayerPrefs.GetFloat(VOLUME_KEY, 1f);
-        musicSource.volume = savedVolume;
     }
 }

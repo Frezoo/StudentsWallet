@@ -13,7 +13,13 @@ public class DoorOutLogic : MonoBehaviour
     public List<int> AcceptedMarketTime;
     public List<int> AcceptedUniversityTime;
 
-    
+    [Header("Audio")]
+    public AudioClip GoToOutAudio;
+    public AudioClip GoToGymAudio;
+   
+
+
+
 
     void Start()
     {
@@ -28,6 +34,7 @@ public class DoorOutLogic : MonoBehaviour
             {
                 return;
             }
+            GameManager.Instance.PlayActionAudio(GoToOutAudio);
             GC.FadeScreen(6, 0.4f);
             GameManager.Instance.ChangeTime(3, 0);
             GameManager.Instance.Energy -= 50;
@@ -43,6 +50,7 @@ public class DoorOutLogic : MonoBehaviour
         if (AcceptedMarketTime.Contains(GameManager.Instance.Hourse))
         {
             GameManager.Instance.ChangeTime(0, 40);
+            GameManager.Instance.PlayActionAudio(GoToOutAudio);
             GC.FadeScreen(1.33f, 0.1f);
             SceneManager.LoadSceneAsync(3);
         }
@@ -53,27 +61,34 @@ public class DoorOutLogic : MonoBehaviour
     {
         if (AcceptedUniversityTime.Contains(GameManager.Instance.Hourse) && !(GameManager.Instance.IsPlayerWasOnLecture))
         {
+            GameManager.Instance.PlayActionAudio(GoToOutAudio);
             GameManager.Instance.ChangeTime(3, 0);
             GameManager.Instance.Energy -= 55;
             GameManager.Instance.Psycho -= 20;
             GameManager.Instance.IsPlayerWasOnLecture = true;
+           
             if (GameManager.Instance.Day % 2 == 0)
             {
                 GC.FadeScreen(6, 1);
+                GameManager.Instance.Grade += 5;
             }
             else if (GameManager.Instance.Day == 1)
             {
                 SceneManager.LoadScene(8);
+                
                 PlayerPrefs.SetInt("LectureNumber", 1);
+                GameManager.Instance.Grade += 20;
             }
             else if(GameManager.Instance.Day <= 10)
             {
                 SceneManager.LoadScene(8);
+                GameManager.Instance.Grade += 20;
                 PlayerPrefs.SetInt("LectureNumber", 1 + (GameManager.Instance.Day / 2));
             }
             else
             {
                 GC.FadeScreen(6, 1);
+                GameManager.Instance.Grade += 5;
             }
             
         }
@@ -85,8 +100,9 @@ public class DoorOutLogic : MonoBehaviour
     {
         if (AcceptedGymTime.Contains(GameManager.Instance.Hourse))
         {
+            GameManager.Instance.PlayActionAudio(GoToGymAudio);
             GameManager.Instance.ChangeTime(1, 0);
-            GC.FadeScreen(4, 2);
+            GC.FadeScreen(9, 2);
             GameManager.Instance.Energy -= 30;
             GameManager.Instance.Psycho += 30;
         }

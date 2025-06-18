@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     public GameCycle GC;
     public bool IsPlayerWasOnLecture;
     public bool WasPayment;
+    public AudioClip sleepAudio;
 
 
 
@@ -104,14 +105,14 @@ public class GameManager : MonoBehaviour
             Debug.Log("Ñêðèíøîò âçÿò!");
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha8))
-        {
-            Job = Job.Ñourier;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha9))
-        {
-            Job = Job.CallÑenterOperator;
-        }
+        //if (Input.GetKeyDown(KeyCode.Alpha8))
+        //{
+        //    Job = Job.Ñourier;
+        //}
+        //if (Input.GetKeyDown(KeyCode.Alpha9))
+        //{
+        //    Job = Job.CallÑenterOperator;
+        //}
 
         if (Day % 5 == 0 && WasPayment == false)
         {
@@ -127,7 +128,8 @@ public class GameManager : MonoBehaviour
     private void SetNextDay()
     {
         GC = GameObject.Find("UpdateUI").GetComponent<GameCycle>();
-        GC.FadeScreen(8, 0.1f);
+        GC.FadeScreen(10, 0.1f);
+        PlayActionAudio(sleepAudio);
         Hourse = 7;
         Minuts = 0;
         Day++;
@@ -172,5 +174,10 @@ public class GameManager : MonoBehaviour
             Minuts = 0;
             Day = 1;
         }
+    }
+
+    public void PlayActionAudio(AudioClip clip)
+    {
+        GameObject.Find("ActionAudioPlayer").GetComponent<AudioSource>().PlayOneShot(clip);
     }
 }

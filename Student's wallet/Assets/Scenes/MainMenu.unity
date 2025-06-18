@@ -1330,7 +1330,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1234
+  m_SortingOrder: 32767
   m_TargetDisplay: 0
 --- !u!1 &1052330187
 GameObject:
@@ -2594,7 +2594,19 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 339689895}
+        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
+        m_MethodName: SetVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &1763817535
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2735,6 +2747,7 @@ MonoBehaviour:
   GC: {fileID: 0}
   IsPlayerWasOnLecture: 0
   WasPayment: 0
+  sleepAudio: {fileID: 8300000, guid: 664fa31a381f5124c8c6c2fe2a8826ed, type: 3}
 --- !u!4 &2063375841
 Transform:
   m_ObjectHideFlags: 0

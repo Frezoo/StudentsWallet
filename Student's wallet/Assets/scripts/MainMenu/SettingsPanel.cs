@@ -4,42 +4,43 @@ using UnityEngine.UI;
 
 public class SettingsPanel : MonoBehaviour
 {
-    [SerializeField] private GameObject pauseMenuUI; // Панель меню паузы
-    [SerializeField] private Slider volumeSlider;    // Ползунок громкости
+    public static SettingsPanel Instance { get; private set; }
+
+    [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private Slider volumeSlider;
 
     private bool isPaused = false;
 
-    private const string VOLUME_KEY = "Volume"; // Ключ для PlayerPrefs
+    private const string VOLUME_KEY = "MusicVolume"; // Единое имя ключа
 
     void Awake()
     {
-        // Синглтон — сохраняем объект между сценами
-        DontDestroyOnLoad(gameObject);
-
-        // Если уже есть копия — уничтожаем текущую
-        if (FindObjectsOfType<SettingsPanel>().Length > 1)
+        if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
             return;
         }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
+        LoadVolume(); // Громкость загружается сразу после Awake()
     }
 
     void Start()
     {
-        LoadVolume(); // Загружаем сохранённую громкость при старте
-
         if (volumeSlider != null)
         {
-            volumeSlider.value = AudioListener.volume;
+            float savedVolume = PlayerPrefs.GetFloat(VOLUME_KEY, 1f);
+            volumeSlider.value = savedVolume;
             volumeSlider.onValueChanged.AddListener(ChangeVolume);
         }
 
-        ResumeGame(); // Убедимся, что игра не на паузе при старте
+        ResumeGame(); // Игра не на паузе при старте
     }
 
     void Update()
     {
-        // Открытие/закрытие меню по ESC
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
@@ -63,27 +64,24 @@ public class SettingsPanel : MonoBehaviour
         isPaused = false;
     }
 
-    public void QuitToMainMenu()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("MainMenu"); // Замени на имя твоей главной сцены
-    }
-
     public void QuitGame()
     {
-        Time.timeScale = 1f;
-        SaveVolume(); // Сохраняем громкость перед выходом
+        SaveVolume();
         Debug.Log("Выход из игры");
-        Application.Quit();
 
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
 #endif
     }
 
     private void ChangeVolume(float volume)
     {
         AudioListener.volume = volume;
+        PlayerPrefs.SetFloat(VOLUME_KEY, volume);
+        PlayerPrefs.Save();
+        Debug.Log($"[SettingsPanel] Громкость установлена: {volume:F2}");
     }
 
     private void SaveVolume()
@@ -94,14 +92,8 @@ public class SettingsPanel : MonoBehaviour
 
     private void LoadVolume()
     {
-        if (PlayerPrefs.HasKey(VOLUME_KEY))
-        {
-            float savedVolume = PlayerPrefs.GetFloat(VOLUME_KEY);
-            AudioListener.volume = savedVolume;
-        }
-        else
-        {
-            AudioListener.volume = 1.0f; // Громкость по умолчанию
-        }
+        float savedVolume = PlayerPrefs.GetFloat(VOLUME_KEY, 1f);
+        AudioListener.volume = savedVolume;
+        Debug.Log($"[SettingsPanel] Громкость загружена: {savedVolume:F2}");
     }
 }

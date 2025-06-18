@@ -15,11 +15,14 @@ public class FridgeLogic : MonoBehaviour
     public Image EatCountFrontImage;
     public GameObject BarObject;
 
+    [Header("Audio")]
+    public AudioClip eat;
     
 
     private void OnMouseEnter()
     {
         EatCountFrontImage.fillAmount = (float)CurrentEatCount / MaxEat;
+       
         BarObject.SetActive(true);
     }
 
@@ -36,6 +39,7 @@ public class FridgeLogic : MonoBehaviour
             CurrentEatCount--;
             EatCountFrontImage.fillAmount = (float)CurrentEatCount / MaxEat;
             GameManager.Instance.Energy += 1 * EatToEnergyScale;
+            GameManager.Instance.PlayActionAudio(eat);
             PlayerPrefs.SetInt("FrideEat",CurrentEatCount);
         }
     }
