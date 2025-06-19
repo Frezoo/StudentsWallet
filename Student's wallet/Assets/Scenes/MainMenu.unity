@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 113405214}
   - component: {fileID: 113405213}
   m_Layer: 0
-  m_Name: Game Manager
+  m_Name: Menu Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb0b19fdda39b854da0f4b52f47eaffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SettingsOBJ: {fileID: 1679575657}
+  SettingsOBJ: {fileID: 1544057061}
 --- !u!4 &113405214
 Transform:
   m_ObjectHideFlags: 0

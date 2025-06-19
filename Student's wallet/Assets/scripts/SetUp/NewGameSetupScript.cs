@@ -61,7 +61,7 @@ public class NewGameSetup : MonoBehaviour
         // Устанавливаем флаг, что игра была инициализирована
         PlayerPrefs.SetInt("GameInitialized", 1);
         PlayerPrefs.Save();
-
+        GameManager.Instance.SetupInitialGameState();
         // Загружаем основную сцену
         SceneManager.LoadScene("GameScene");
     }

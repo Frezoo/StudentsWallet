@@ -162,7 +162,7 @@ public class GameManager : MonoBehaviour
         SetupInitialGameState();
     }
 
-    private void SetupInitialGameState()
+    public void SetupInitialGameState()
     {
         if (PlayerPrefs.GetInt("GameInitialized") == 0)
         {
