@@ -173,6 +173,7 @@ public class GameManager : MonoBehaviour
             Hourse = 7;
             Minuts = 0;
             Day = 1;
+            Job = Job.None;
         }
     }
 
